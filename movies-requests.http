@@ -1,0 +1,51 @@
+### GET request to example server
+GET http://localhost:3000
+Content-Type: application/json
+###
+### GET request to example server
+GET http://localhost:3000/movies
+
+###
+### POST request to example server
+POST http://localhost:3000/movies
+Content-Type: application/json
+
+{
+  "title": "Incepcja",
+  "releaseYear": 2010,
+  "genre": "Science Fiction",
+  "director": "Christopher Nolan",
+  "cast": [
+    "Leonardo DiCaprio",
+    "Joseph Gordon-Levitt",
+    "Elliot Page"
+  ],
+  "rating": 8.8,
+  "description": "Zespół specjalistów od kradzieży tajemnic z podświadomości podejmuje się zadania wszczepienia idei w umyśle ofiary."
+}
+###
+
+###  POST with Error
+POST http://localhost:3000/movies
+Content-Type: application/json
+
+{
+  "title": "Sigma"
+}
+###
+
+### PUT
+PUT http://localhost:3000/movies/683b221043526edc099883ac
+Content-Type: application/json
+
+{
+  "title": "Inception"
+}
+
+###
+
+### Delete
+DELETE http://localhost:3000/movies/683b221043526edc099883ac
+Content-Type: application/json
+
+###
